@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello GestionController!
+{% endblock %}
+{% block stylesheet %}
+	<link rel="stylesheet" href="{{ asset('css/gestion-index.css') }}">
+{% endblock %}
+{% block body %}
+	<h1>Gestion</h1>
+	{% include "_include/gestion_nav.html.twig" %}
+{% endblock %}

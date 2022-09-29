@@ -1,0 +1,31 @@
+@import "pico-master/scss/pico.scss";
+@import "reset";
+
+#table_driver {
+    display: none;
+
+    @include wide-screen {
+        display: block;
+
+    }
+}
+
+#driver_mobile {
+
+    @include wide-screen {
+        display: none;
+    }
+
+}
+
+.home_header {
+    width: auto;
+    height: 400px;
+    background-image: url('../image/bannier.jpg');
+    background-size: cover;
+
+
+    @include wide-screen {
+        height: 600px;
+    }
+}

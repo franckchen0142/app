@@ -1,0 +1,55 @@
+<div class="nav-background">
+
+
+	<nav class="container">
+		<ul>
+			<li>
+
+				<strong>Paris Prestige Transfert</strong>
+
+			</li>
+		</ul>
+		<ul class="myLinks">
+			<li>
+				<a href="{{path('app_home')}}">Accueil</a>
+			</li>
+			<li>
+				<a href="{{path('app_contact')}}">Contact</a>
+			</li>
+			{% if app.user %}
+				<li>
+					<details role="list" dir="rtl">
+						<summary aria-haspopup="listbox" role="link">Parametre</summary>
+						<ul role="listbox">
+							<li>
+								<a href="{{ path('app_profile_index') }}">Profile</a>
+							</li>
+							{% if app.user.isCompany %}
+								<li>
+									<a href="{{ path('app_gestion_index') }}">Gestion</a>
+								</li>
+							{% endif %}
+
+
+							<li>
+								<a href="{{path('app_logout')}}">Logout</a>
+							</li>
+						</ul>
+					</details>
+				</li>
+
+			{% else %}
+				<li>
+					<a href="{{path('app_register')}}">register</a>
+				</li>
+				<li>
+					<a href="{{path('app_login')}}">login</a>
+				</li>
+			{% endif %}
+
+
+		</ul>
+	</nav>
+
+
+</div>

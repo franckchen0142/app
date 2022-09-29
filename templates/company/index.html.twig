@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Gestion Company
+{% endblock %}
+
+{% block body %}
+	<nav>
+		<ul>
+			<li>
+				<h3>Societe</h3>
+			</li>
+		</ul>
+		<ul>
+			<li></li>
+			<li>
+				<a href="{{path('app_gestion_index')}}">Retour Gestion</a>
+			</li>
+		</ul>
+	</nav>
+
+	{{ form_start(form) }}
+	{{ form_widget(form) }}
+	<button type="submit">Enregister</button>
+	{{ form_end(form) }}
+
+{% endblock %}
